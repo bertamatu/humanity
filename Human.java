@@ -14,6 +14,10 @@ public class Human {
 //    }
 
 
+    public int getId() {
+        return id;
+    }
+
     public int getAge() {
         return age;
     }
