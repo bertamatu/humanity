@@ -4,12 +4,22 @@ public class Human {
     private static int ID = 1;
     private int id;
     private int age;
-    private String gender;
 
     public Human(int age) {
         this.id = ID++;
         this.age = age;
-//        this.gender = gender;
+    }
+
+//    public humansDie(){
+//    }
+
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     @Override
