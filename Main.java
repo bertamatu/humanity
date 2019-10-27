@@ -9,7 +9,7 @@ public class Main {
         List<Human> humans = new ArrayList<>();
         Random random = new Random();
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 2; i++) {
 
             humans.removeIf(a -> a.getAge() > 60);
 
@@ -32,10 +32,10 @@ public class Main {
         }
 
         Human lastIndex = humans.get(humans.size() - 1); //atimame 1, nes size, skaiciuojamas nuo 0;
+
         System.out.println("Iš viso sukurta žmonių: " + lastIndex.getId());
         //statistika pagal lyti;
         //statistika, pagal amziaus grupes
-        //
         System.out.println("Iš viso mirusių žmonių: " + (humans.size() - lastIndex.getId()));
         System.out.println("Pupuliacija šiuo metu: " + humans.size());
 

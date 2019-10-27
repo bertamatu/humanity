@@ -4,6 +4,7 @@ public class Human {
     private static int ID = 1;
     private int id;
     private int age;
+    private Gender gender = Gender.getRandom();
 
     public Human(int age) {
         this.id = ID++;
@@ -27,7 +28,7 @@ public class Human {
         return "Human{" +
                 "id=" + id +
                 ", age=" + age +
-                ", gender= " +
+                ", gender= " + gender +
                 '}';
     }
 }
