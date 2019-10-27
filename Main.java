@@ -9,13 +9,11 @@ public class Main {
         List<Human> humans = new ArrayList<>();
         Random random = new Random();
 
+        for (int i = 0; i < 5; i++) {
 
-        for (int i = 0; i < 3; i++) {
+            humans.removeIf(a -> a.getAge() > 60);
 
-            humans.removeIf(a -> a.getAge() > 40);
-
-
-            for (int j = 0; j < 4; j++) {
+            for (int j = 0; j < 5; j++) {
                 int age = random.nextInt(101);
                 humans.add(new Human(age));
             }
@@ -26,24 +24,26 @@ public class Main {
                 humans.add(new Human(0));
                 humans.forEach(a -> a.setAge(a.getAge() + 1));
 
-                //TODO aprasyti metodus tvarkingai;
-
                 System.out.println(humans);
+
             } catch (InterruptedException ex) {
 
             }
-
-            System.out.println("Pupuliacija šiuo metu: " + humans.size());
-
         }
-        Human lastIndex = humans.get(humans.size() - 1);
 
-        System.out.println("Is viso sukurta zmoniu: " + lastIndex.getId());
+        Human lastIndex = humans.get(humans.size() - 1); //atimame 1, nes size, skaiciuojamas nuo 0;
+        System.out.println("Iš viso sukurta žmonių: " + lastIndex.getId());
+        //statistika pagal lyti;
+        //statistika, pagal amziaus grupes
+        //
         System.out.println("Iš viso mirusių žmonių: " + (humans.size() - lastIndex.getId()));
+        System.out.println("Pupuliacija šiuo metu: " + humans.size());
+
 
     }
 
 }
 
 
-///kodel id ne is eiles.
+
+

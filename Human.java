@@ -10,10 +10,6 @@ public class Human {
         this.age = age;
     }
 
-//    public humansDie(){
-//    }
-
-
     public int getId() {
         return id;
     }
@@ -31,6 +27,8 @@ public class Human {
         return "Human{" +
                 "id=" + id +
                 ", age=" + age +
+                ", gender= " +
                 '}';
     }
 }
+
